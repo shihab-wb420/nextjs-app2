@@ -9,10 +9,13 @@ const SinglePost = () =>{
   const [post, setPost] = useState([])
   
   //-----Fetching data by post id--------
-    useEffect(async()=>{
-       let post = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+  const getData= async ()=>{
+    let post = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
        post= await post.json();
        setPost(post)
+  }
+    useEffect(()=>{
+       getData();
     },[id])
     
   return (
