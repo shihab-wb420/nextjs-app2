@@ -8,16 +8,23 @@ const Todos = () =>{
   const initialState =[];
   const [todos,setTodos]= useState(initialState)
   const [loading, setLoading] = useState(true)
-  
-  useEffect(async ()=>{
-    const collectionRef = await collection(db,"todos");
-    const q = query(collectionRef,orderBy("timestamp","desc"));
+
+ const GetData = async ()=>{
+const collectionRef = await collection(db,"todos");
+   
+ const q = query(collectionRef,orderBy("timestamp","desc"));
     const unsubscribe = onSnapshot(q,(querySnapshot)=>{
       setTodos(querySnapshot.docs.map(doc=>({...doc.data(), id:doc.id, timestamp: doc.data().timestamp?.toDate() })))
     });
     setLoading(false)
     return unsubscribe;
     console.log(unsubscribe);
+
+}
+  
+  useEffect( ()=>{
+    
+    GetData();
   },[])
 
   
