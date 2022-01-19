@@ -1,0 +1,48 @@
+
+.postBoxWrapper{
+  
+}
+.postBox{
+  margin: 1em 0em;
+  padding: 1em;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  height: auto;
+  width: content-fit;
+}
+.thumbnail{
+  width: 100%;
+  border-bottom: 1px solid green;
+  height: 18em;
+  margin-bottom: 1em;
+}
+.thumbnail img{
+  
+}
+.title{
+  height: auto;
+}
+.title a{
+  color: var(--dark-color);
+}
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+  color: #6B76F5;
+}
+
+.authorName{
+  font-size: 0.8em;
+  color: var(--dark-color);
+}
+.description{
+
+  color: var(--dark-color);
+}
+.category{
+  font-size: 0.8em;
+}
+/*-------posted On date-------*/
+.date{
+  font-size: 0.8em;
+}

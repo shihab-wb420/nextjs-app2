@@ -1,0 +1,17 @@
+
+.singlePostWrapper{
+  padding: 1em;
+  margin: 0.5em auto;
+  text-align: left;
+  width: 96vw;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  color: var(--dark-color);
+}
+
+.singlePostWrapper p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  
+}
+
+
