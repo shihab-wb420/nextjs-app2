@@ -1,6 +1,6 @@
 
 import Nav from '../../components/Nav'
-
+import Image from 'next/image'
 
 export const getStaticProps = async ()=>{
   let photos = await fetch("https://jsonplaceholder.typicode.com/photos");
@@ -22,8 +22,8 @@ const Album = ({photos}) =>{
        {photos && photos.slice(0,50).map((photo)=>{
          return(
             <div key={photo.id}>
-              <img src={photo.thumbnailUrl} alt={photo.id}/>
-              <img src={photo.url} alt={photo.id}/>
+              <Image src={photo.thumbnailUrl} alt={photo.id}/>
+              <Image src={photo.url} alt={photo.id}/>
               <h1> {photo.title}</h1>
             </div>
          );
